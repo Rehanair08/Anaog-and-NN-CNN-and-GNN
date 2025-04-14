@@ -2,22 +2,26 @@
 ## Table of Contents
 - [About the Project](about-the-project)
 - [Methodolgy](Methodogy)
-- [Nerual Network](nerual-network)
 - [Excpeted Outcomes](expected-outcomes)
 - [Conclusion](conclusion)
 ## About The Project
-This project focuses on secure image compression, encryption, transmission, and reconstruction using an Autoencoder Neural Network and Secure Multi-Party Computation (SMPC) encryption. The system compresses a grayscale image using a convolutional autoencoder, encrypts it by splitting the compressed data into two secret shares, and transmits it securely to an ESP32 microcontroller via serial communication. The received data is decrypted and reconstructed using the trained autoencoder to restore the original image. This approach ensures efficient storage, secure transmission, and accurate image recovery, making it suitable for privacy-preserving applications in medical imaging and secure communication systems.
+In today's more connected world, the need for quicker, safer, and more efficient means of data transfer is ever-increasing. Older wireless technologies such as Wi-Fi and Bluetooth have transformed the way we communicate, but they are not without their limitation, everything from spectrum congestion to possible security risks. As digital communication continues to grow more data-heavy, especially with the proliferation of smart devices, IoT networks, and multimedia data, there is increasing demand for new communication solutions that can address these challenges directly. Li-Fi (Light Fidelity) is a new technology that presents an interesting solution.
+
+With the use of visible light to transmit data, Li-Fi creates a huge, unregulated spectrum that is many times larger than the conventional radio frequency spectrum. In contrast to Wi-Fi, which uses radio waves to transmit data, Li-Fi uses modulated light signals usually LEDs or lasers to wirelessly transfer data. This enables very high-speed data transfer and introduces a physical security layer, as light cannot pass through solid objects, thus restricting data leakage. This project investigates the practical application of Li-Fi technology in real-time digital image transfer.
+
+The objective is to create an operational prototype with the ability to transmit compressed image data via a laser-based Li-Fi system within a short range. A laser diode acts as the transmitter of light and a photodiode as the receiver. A microcontroller that is an ESP32 is the core of the system, handling the control of data flow as well as modulating and demodulating the signals. To optimize image transmission, we implement methods like PCA- based auto-encoder to compress the image during transmission. This reduces the data size remarkably without affecting the quality of the recovered image. The compressed image is encoded in binary form and transmitted through modulated light pulses. These signals are decoded at the receiver and an image is recovered using the onboard processing capacity of the ESP32.
+
+In addition, the project uses cloud technology through the incorporation of Dropbox API for safe storage and recovery of image files. This way, the image data is not only communicated efficiently but also stored and available remotely.
+
 ## Methodology
-- Image Acquisition and Pre-processing
-- Autoencoder Model for Compression
-- Bitstream Generation & Encryption
-- Secure Data Transmission to ESP32
-- Receiver Side Processing & Reconstruction
-## Neural Network
-Image classification (code attached)
+
+![image](https://github.com/user-attachments/assets/6b214142-7809-425d-b5f1-7fa37b372192)
+
+
 ## Expected Outcomes
 1. Data transfer in limited range.
 2. Secured Data.
 ## Conclusion
 
-By this project, we can successfully implement a Li-Fi-based image transfer system. The process involves compressing an image, converting it into bits, encrypting the bits for security, and transmitting them via an ESP32 using Li-Fi technology. The encrypted bits are decrypted and reconstructed to retrieve the original image. It demonstrates the feasibility of using Li-Fi for secure and efficient data transmission, highlighting its potential for high-speed and wireless communication applications.
+Developed a working Li-Fi prototype for image transfer using ESP32 and optical components, achieved efficient image compression through PCA-based autoencoder, reliable data transmission. Demonstrated a secure, short-range communication system with cloud-based file management.
+
